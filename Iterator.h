@@ -5,8 +5,8 @@ using namespace std;
 class ConvertIterator {
 public:
 	vector<int>::iterator iterator;
-	function<void(int&)> lambda;
-	ConvertIterator(vector<int>::iterator i, std::function<void(int&)> lambda);
-	void Convert(vector<int>::iterator lastiterator);
+	function<void(int&, int)> lambda;
+	ConvertIterator(vector<int>::iterator i, function<void(int&, int)> lambda);
+	void Convert(vector<int>::iterator lastiterator, int object);
 	~ConvertIterator();
 };

@@ -3,14 +3,28 @@
 #include "Iterator.h"
 using namespace std;
 int main() {
-	vector<int> digits = { 1, 2, 3, 4, 5 };
+	int n;
+	cout << "Enter number of digits: ";
+	cin >> n;
+	cout << "Enter " << n <<" digits: ";
+	vector<int> digits = {};
+	for (int i = 0; i < n; ++i) {
+		int value;
+		cin >> value;
+		digits.push_back(value);
+	}
+	cout << endl;
 	cout << "Initial vector: ";
 	for (auto i = digits.begin(); i != digits.end(); ++i) {
 		cout << *i << " ";
 	}
 	cout << endl << endl;
-	ConvertIterator It(digits.begin(), [](int& value) {value += 50; });
-	It.Convert(digits.end());
+	int object;
+	cout << "Enter number to sum with digits: ";
+	cin >> object;
+	cout << endl;
+	ConvertIterator It(digits.begin(), [](int& value, int object) {value += object; });
+	It.Convert(digits.end(), object);
 	cout << endl;
 	cout << "Current vector: ";
 	for (auto i = digits.begin(); i != digits.end(); ++i) {
