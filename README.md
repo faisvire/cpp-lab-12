@@ -1,0 +1,1 @@
+добавила структуру FunctionalObject (в Iterator.h), в Iterator.cpp перегрузила оператор (), заменила метод Convert класса ConvertIterator - теперь в теле метода создается объект структуры FunctionalObject.
