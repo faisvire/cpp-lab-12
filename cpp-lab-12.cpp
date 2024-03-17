@@ -23,7 +23,7 @@ int main() {
 	cout << "Enter number to sum with digits: ";
 	cin >> object;
 	cout << endl;
-	ConvertIterator It(digits.begin(), [](int& value, int object) {value += object; });
+	ConvertIterator It(digits.begin());
 	It.Convert(digits.end(), object);
 	cout << endl;
 	cout << "Current vector: ";
