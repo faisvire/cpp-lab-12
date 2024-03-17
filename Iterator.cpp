@@ -16,5 +16,8 @@ void ConvertIterator::Convert(vector<int>::iterator lastiterator, int object) {
 		++iterator;
 	}
 }
+void FunctionalObject::operator()(int& value, int object) {
+	value += object;
+}
 ConvertIterator::~ConvertIterator() {
 }

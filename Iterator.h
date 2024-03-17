@@ -10,7 +10,5 @@ public:
 	~ConvertIterator();
 };
 struct FunctionalObject {
-	void operator()(int& value, int object) {
-		value += object;
-	}
+	void operator()(int& value, int object);
 };
